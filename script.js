@@ -27,7 +27,9 @@ $('.tableBody').append(`
 $('.firstName').val(' ');
 $('.lastName').val(' ');
 $('.Id').val(' ');
-$('.title').val(' ');
+$('.titleClass').val(' ');
 $('.annualSalary').val(' ');
+
+
 
 }
