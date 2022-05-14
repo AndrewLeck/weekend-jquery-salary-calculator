@@ -1,9 +1,10 @@
 console.log('Hello world');
 $(document).ready(readNow);
 
+
 function readNow(){
 $('.button').on('click', submitButton,);
-
+//$('.button').on('click', getMonthlyTotal);
 }
 
 
@@ -30,6 +31,15 @@ $('.Id').val(' ');
 $('.titleClass').val(' ');
 $('.annualSalary').val(' ');
 
-
+$('.total').append(`${annualSalary}`);
 
 }
+
+
+
+//function getMonthlyTotal(){
+    
+  //  $('.total').append(` <td>${annualSalary}</td>`);
+
+
+//}
