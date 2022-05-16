@@ -1,0 +1,40 @@
+.title{
+    text-align: center;
+    background-color: lightgrey;
+    padding: 30px;
+    margin-top: auto;
+}
+
+
+.firstName{
+margin-right: 5px;
+width: 110px;
+}
+
+.lastName{
+ margin-right: 5px;
+ width: 110px;
+
+}
+
+.Id{
+margin-right: 5px;
+width: 110px;    
+}
+ .titleClass{
+margin-right: 5px;
+width: 110px;    
+ }
+
+ .annualSalary{
+margin-right: 5px;
+width: 110px;       
+ }
+
+
+
+
+
+.mySubmitButton{
+padding: 10px;
+}

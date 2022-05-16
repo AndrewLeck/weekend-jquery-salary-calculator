@@ -12,16 +12,19 @@ let employees = [];
 function readNow(){
 $('.button').on('click', submitButton);
 // $('.button').on('click', getMonthlyTotal);
+$('.remove').on('click', delteRow);
 
 }
 
 
 function submitButton(){
+
 let firstName = $('.firstName').val();
 let lastName = $('.lastName').val();
 let ID = $('.Id').val();
 let titleClass = $('.titleClass').val();
 let annualSalary = Number($('.annualSalary').val());
+let deleteMe = $('.remove');
 
 let people = {
     firstName: firstName,
@@ -30,6 +33,7 @@ let people = {
     title: titleClass,
     annualSalary: annualSalary
 }; 
+
 employees.push(people);
 console.log(employees);
 
@@ -38,10 +42,10 @@ $('.tableBody').empty();
 let totalSalary = 0;
 
 for( let people of employees){
+
     console.log(people.firstName);
     totalSalary+= people.annualSalary;
 
-    
 $('.tableBody').append(`
 <tr>
     <td>${people.firstName}</td>
@@ -49,8 +53,10 @@ $('.tableBody').append(`
     <td>${people.id}</td>
     <td>${people.title}</td>
     <td>${people.annualSalary}</td>
+    <td>${deleteMe}</td>
 </tr>
 `);
+
 }
 
 
@@ -63,7 +69,10 @@ $('.annualSalary').val(' ');
 
 
 
- $('.total').text('Total Monthly:'+ totalSalary );
+ $('.total').text('Total Monthly:' + Number( totalSalary ));
+if( totalSalary > 20,000 ){
+    console.log('TOO MUCH MONEY!');
+}
 
 
 }
@@ -75,3 +84,9 @@ $('.annualSalary').val(' ');
 //     console.log(getMonthlyTotal, annualSalary);
 
 // }
+
+function delteRow(){
+    let tr = $(this).parent().parent()
+    alert('Are you sure you want to delete this row?');
+    tr.remove();
+}

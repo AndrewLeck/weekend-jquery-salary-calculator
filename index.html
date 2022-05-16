@@ -7,6 +7,7 @@
     <title>Salary Calculator</title>
     <script src="jquery.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>   
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
         <input class="titleClass" placeholder="Title"></input>
         <input class="annualSalary" placeholder="Annual Salary"></input>
     </div>
-        <div>
+        <div class="mySubmitButton">
             <button class="button"> Submit </button>
         </div>
     <div> 
@@ -43,11 +44,12 @@
                <td> </td>
                <td> </td>
                <td> </td>
+               <td><button class="remove">Delete</button></td>
            </tr>
        </tbody>
     </table>
-    <div><h3 class="total"> Total Monthly:</h3>
-        
+    <div>
+        <h3 class="total"> Total Monthly:</h3>
     </div>
 </body>
 </html>
